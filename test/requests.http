@@ -1,0 +1,29 @@
+### Test filterItems Function
+GET https://localhost:4004/ItemsService/filterItems?quantity=10
+Content-Type: application/json
+Accept: application/json
+
+ 
+### Test createItem Action - Valid Quantity
+POST https://localhost:4004/ItemsService/createItem
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Sample Item",
+    "quantity": 50
+}
+
+###
+
+### Test createItem Action - Quantity Greater than 100 (Should Return Error)
+POST https://localhost:4004/ItemsService/createItem
+Content-Type: application/json
+Accept: application/json
+
+{
+    "title": "Invalid Quantity Item",
+    "quantity": 150
+}
+
+###
