@@ -4,6 +4,17 @@ module.exports = cds.service.impl(async function(){
 
     const { Items } = this.entities;
 
+    
+    this.before("createItem", Items, async(req) => {
+        const { quantity } = req.data;
+
+    
+        if(quantity > 100) {
+            return req.error(400, 'Quantity cannot be greater than 100')
+        }
+    })
+
+
     this.on("filterItems", async(req)=> {
         const { quantity } = req.data;
         const items = await cds.run(SELECT.from(Items).where({
@@ -23,13 +34,5 @@ module.exports = cds.service.impl(async function(){
         return newItem
     })
 
-
-    this.before("CREATE", Items, async(req) => {
-        const { quantity } = req.data;
-
-        if(quantity > 100) {
-            return req.error(400, 'Quantity cannot be greater than 100')
-        }
-    })
 
 })

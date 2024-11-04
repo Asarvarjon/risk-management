@@ -1,28 +1,34 @@
+### get items
+GET http://localhost:4004/odata/v4/service/items/Items
+Content-Type: application/json
+Accept: application/json
+
+
 ### Test filterItems Function
-GET https://localhost:4004/ItemsService/filterItems?quantity=10
+GET http://localhost:4004/odata/v4/service/items/filterItems?quantity=10
 Content-Type: application/json
 Accept: application/json
 
  
 ### Test createItem Action - Valid Quantity
-POST https://localhost:4004/ItemsService/createItem
+POST http://localhost:4004/odata/v4/service/items/createItem
 Content-Type: application/json
 Accept: application/json
 
 {
     "title": "Sample Item",
-    "quantity": 50
+    "quantity": 40
 }
 
 ###
 
 ### Test createItem Action - Quantity Greater than 100 (Should Return Error)
-POST https://localhost:4004/ItemsService/createItem
+POST http://localhost:4004/odata/v4/service/items/createItem
 Content-Type: application/json
 Accept: application/json
 
 {
-    "title": "Invalid Quantity Item",
+    "title": "Invalid Quantity",
     "quantity": 150
 }
 
