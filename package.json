@@ -31,11 +31,20 @@
         "kind": "odata",
         "model": "srv/external/API_BUSINESS_PARTNER"
       },
-      
       "db": {
         "kind": "sqlite",
         "credentials": {
           "url": "db.sqlite"
+        }
+      },
+      "northwind": {
+        "kind": "odata-v2",
+        "model": "srv/external/northwind"
+      },
+      "OnPremiseExpressApp": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "OnPremiseExpressApp"
         }
       }
     }
