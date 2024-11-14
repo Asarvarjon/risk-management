@@ -1,6 +1,6 @@
 
 // Import the cds facade object (https://cap.cloud.sap/docs/node.js/cds-facade)
-const cds = require('@sap/cds') 
+const cds = require('@sap/cds')  
  
 
 // The service implementation with all service handlers
@@ -45,8 +45,7 @@ module.exports = cds.service.impl(async function() {
     // connect to remote service
     
     const BPsrv = await cds.connect.to("API_BUSINESS_PARTNER");
-    // const destinationConfig = await getDestination({destinationName: 'API_BUSINESS_PARTNER'});
-    // const key = destinationConfig.originalProperties.APIKey
+     
     /**
      * Event-handler for read-events on the BusinessPartners entity.
      * Each request to the API Business Hub requires the apikey in the header.
