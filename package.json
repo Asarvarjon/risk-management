@@ -11,7 +11,7 @@
     "@sap-cloud-sdk/http-client": "2.15.0",
     "@sap-cloud-sdk/resilience": "3.12.0",
     "@sap/cds": "8.4.0",
-    "@sap/cds-dk": "8.4.0",
+    "@sap/cds-dk": "8.4.1",
     "express": "^4",
     "sqlite3": "^5.1.7",
     "@cap-js/hana": "^1"
